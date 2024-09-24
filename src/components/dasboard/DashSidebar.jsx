@@ -41,7 +41,7 @@ export default function DashSidebar() {
             <h1 className="font-semibold text-lg mb-6">
                 {admin ? "Admin Panel" : "Welcome Back!"}
             </h1>
-            <div className="flex justify-between flex-col min-h-screen">
+            <div className="flex justify-between flex-col  md:min-h-screen">
                 <ul className="">
                     <li>
                         {

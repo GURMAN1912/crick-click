@@ -26,8 +26,8 @@ export default function ProfilePage() {
   }, [location.search]);
 
   return (
-    <div className='bg-black min-h-screen mx-auto'>
-      <div className='flex flex-col md:flex-row min-h-screen '>
+    <div className='bg-black  min-h-screen mx-auto'>
+      <div className='flex flex-col md:flex-row h-full md:min-h-screen '>
         <DashSidebar />
         <div className='w-full min-h-screen md:w-2/3 mx-auto p-4'>
           {tab === 'profile' && user.email==="user@gmail.com" && <UserProfile/>}

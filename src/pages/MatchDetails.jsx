@@ -5,8 +5,10 @@ import LiveScore from '../components/livescore/LiveScore'
 const MatchDetails = () => {
   return (
     <div>
-    <Match />  
-    <LiveScore className=""/> 
+    <Match /> 
+    <div className="pb-10">
+    <LiveScore/> 
+      </div> 
     </div>
   )
 }

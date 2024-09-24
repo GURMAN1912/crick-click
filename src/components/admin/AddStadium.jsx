@@ -12,8 +12,8 @@ const AddStadium = () => {
     };
 
   return (
-    <div className='bg-gray-900 p-9 rounded-[28px] grid place-items-center shadow-lg'>
-        <div className='bg-gray-800 text-white p-8 rounded-lg shadow-lg w-full max-w-md'>
+    <div className='bg-gray-900 md:p-9 rounded-[28px] grid place-items-center shadow-lg'>
+        <div className='bg-gray-800 text-white md:p-8 rounded-lg shadow-lg w-full max-w-md'>
         <div className='title mb-6 text-center !text-yellow-300'>
             <p>Add Stadium :</p>
         </div >

@@ -50,7 +50,7 @@ const Match = () => {
           <div className="w-1/3">
             <h1 className="text-lg font-semibold mb-2">Batters</h1>
             {batters.map((batter, index) => (
-              <p className="border-b border-gray-700 py-1" key={index}>
+              <p className="border-b border-gray-700 truncate py-1" key={index}>
                 {batter}
               </p>
             ))}

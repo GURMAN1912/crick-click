@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { FaPlus } from "react-icons/fa";
+import { FaMinus } from "react-icons/fa";
 
 const AddATournament = () => {
   const stadiums = [
@@ -88,7 +90,7 @@ const AddATournament = () => {
               onClick={decrementTeams}
               className="p-2 bg-yellow-300 text-gray-900 font-bold rounded-lg hover:bg-yellow-400 transition duration-300"
             >
-              -
+              <FaMinus />
             </button>
             <span>{formData.teams} Teams</span>
             <button
@@ -96,7 +98,7 @@ const AddATournament = () => {
               onClick={incrementTeams}
               className="p-2 bg-yellow-300 text-gray-900 font-bold rounded-lg hover:bg-yellow-400 transition duration-300"
             >
-              +
+              <FaPlus />
             </button>
           </div>
 

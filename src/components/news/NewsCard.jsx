@@ -9,7 +9,7 @@ const NewsCard = ({ imgUrl, headline, description, date, author }) => {
       onClick={() => {
         navigate("/news/id?=1");
       }}
-      className="flex hover:cursor-pointer gap-10 text-gray-200"
+      className="flex hover:cursor-pointer md:flex-row flex-col gap-10 text-gray-200"
     >
       <div className="object-cover max-w-[300px]">
         <img

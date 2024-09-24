@@ -38,7 +38,7 @@ export default function DashBoard() {
   );
 
   const stadiumPage = (
-    <div className="p-6">
+    <div className="">
         <AddStadium/>
     </div>
   );

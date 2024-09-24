@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import stadium from "../assets/stadium.jpg"
 import TicketCard from '../components/tickets/TicketCard';
+import { FaArrowRight } from 'react-icons/fa';
+import {motion} from 'framer-motion';
 
 export default function TicketsPage() {
 
@@ -39,12 +41,16 @@ export default function TicketsPage() {
                     <h2>₹{total}</h2>
                 </div>
                 <div className='flex justify-end'>
-                <button className='h-10 w-28 text-white bg-black rounded-md text-xl
-                transition duration-200 hover:border-green-900'>Pay</button>
-                </div>
+                <motion.button whileHover={{ scale: 1.05, boxShadow: "0px 0px 8px rgba(0, 255, 0, 0.5)" }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                    className="text-white bg-gradient-to-r from-green-800 to-green-900 font-semibold py-2 px-6 rounded-full hover:bg-gradient-to-r flex items-center gap-2 hover:from-green-600 hover:to-green-700">
+                    Pay
+                    <FaArrowRight className="ml-2" />
+                </motion.button></div>
             </div>
             <div className='md:pt-10' >
-                <img src={stadium} className='h-96 w-96 rounded-[28px]'/>
+                <img src={stadium} className='md:max-h-96 md:w-96 rounded-[28px]'/>
             </div>
         </div>
     </div>
