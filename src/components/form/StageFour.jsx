@@ -74,7 +74,7 @@ export default function StageFour( {formData ,handleChange, errors} ) {
                   <input
                     type="number"
                     name="palyersCount"
-                    value={formData.palyersCount}
+                    value={formData.playersCount}
                     onChange={handleChange}
                     className="border border-gray-300 rounded-md p-3 bg-black bg-opacity-30 text-white focus:border-green-500 focus:ring focus:ring-green-500 outline-none transition duration-300"
                     placeholder="No of players"
@@ -97,10 +97,10 @@ export default function StageFour( {formData ,handleChange, errors} ) {
               </div>
       
     </div>
-    <div className='flex flex-col gap-2'>
+    <div className='flex flex-col gap-2 px-2'>
+      <h2 className="text-xl text-white font-semibold">Players List</h2>
     {formData.players.length > 0 && (
-        <div className="mt-4">
-          <h2 className="text-xl text-white font-semibold">Players List</h2>
+        <div className="">
           <ul className="list-disc pl-5 text-white">
             {formData.players.map((player, index) => (
               <li key={index}>{`${player.name} - ${player.role}`}</li>

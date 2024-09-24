@@ -3,8 +3,11 @@ import React, { useState } from 'react';
 import gif from '../../assets/loading1.gif';
 import staticImage from '../../assets/static-image.png'; 
 import { FaArrowRight } from 'react-icons/fa';
+import { Link, useNavigate } from 'react-router-dom';
+import {motion} from 'framer-motion';
 export default function HeroBanner() {
   const [isHovered, setIsHovered] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="text-white w-full flex flex-col md:flex-row justify-evenly items-center h-screen bg-cover bg-center relative">
@@ -18,10 +21,13 @@ export default function HeroBanner() {
           Register now for upcoming tournaments in various formats and showcase
           your talent.
         </p>
-        <button className="bg-gradient-to-r from-green-800 to-green-900 py-2 px-5 rounded-full font-medium flex items-center hover:bg-gradient-to-r hover:from-green-600 hover:to-green-700">
+        <motion.button whileHover={{ scale: 1.05, boxShadow: "0px 0px 8px rgba(0, 255, 0, 0.5)" }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: "spring", stiffness: 300 }}
+         onClick={()=>navigate("/sign-up")} className="bg-gradient-to-r from-green-800 to-green-900 font-thin py-2 px-6 rounded-full hover:bg-gradient-to-r flex items-center gap-2 hover:from-green-600 hover:to-green-700">
           Get Started
           <FaArrowRight className="ml-2" />
-        </button>
+        </motion.button>
       </div>
 
       <div className="mx-auto md:w-1/2 flex justify-center">

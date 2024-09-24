@@ -50,7 +50,7 @@ export default function StageThree({ formData, setFormData, errors }) {
           name="role"
           value={playerDetails.role}
           onChange={handlePlayerChange}
-          className={`border border-gray-300 rounded-md p-3 bg-black bg-opacity-30 text-white focus:border-green-400 focus:ring focus:ring-green-400 outline-none transition duration-300 ${
+          className={`border border-gray-300 rounded-md p-3 bg-black bg-opacity-30 text-white focus:border-green-400 focus:ring focus:ring-green-400 outline-none transition duration-300  hover:bg-opacity-80 hover:bg-black ${
             errors.role ? 'border-red-500' : ''
           }`}
           id="role"
@@ -61,8 +61,9 @@ export default function StageThree({ formData, setFormData, errors }) {
           <option value="allRounder">All Rounder</option>
           <option value="wicketKeeper">Wicket Keeper</option>
         </select>
-        {errors.role && <span className="text-red-500">{errors.role}</span>}
+        {/* {errors.players && <span className="text-red-500">{errors.players}</span>}X */}
       </div>
+      
 
       {/* Add Player Button */}
       <button

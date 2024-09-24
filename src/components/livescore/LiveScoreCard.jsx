@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const LiveScoreCard = ({ op1, op2, score1, score2, status, format, venue }) => {
   // Function to determine the result message based on status
@@ -11,9 +12,14 @@ const LiveScoreCard = ({ op1, op2, score1, score2, status, format, venue }) => {
       return <p>{op2} won by 25 runs.</p>;
     }
   };
-
+  const navigate = useNavigate();
   return (
-    <div className="bg-white rounded-[28px] lg:w-[400px] max-h-[200px]">
+    <div
+      onClick={() => {
+        navigate("/match/id?=1");
+      }}
+      className="bg-white rounded-[28px] lg:w-[400px] max-h-[200px]"
+    >
       <div className="headings flex p-6">
         <p className="font-semibold">{status} &nbsp;•&nbsp;</p>
         <p className="font-thin">1st {format}&nbsp;•&nbsp;</p>

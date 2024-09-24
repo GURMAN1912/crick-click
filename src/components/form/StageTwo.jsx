@@ -29,7 +29,7 @@ export default function StageTwo({formData, handleChange, errors}) {
                 <div className="flex flex-col">
                   <input
                     type="number"
-                    name="palyersCount"
+                    name="playersCount"
                     value={formData.palyersCount}
                     onChange={handleChange}
                     className="border border-gray-300 rounded-md p-3 bg-black bg-opacity-30 text-white focus:border-green-500 focus:ring focus:ring-green-500 outline-none transition duration-300"

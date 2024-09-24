@@ -5,10 +5,16 @@ import { FaTwitter } from "react-icons/fa6";
 import group1 from "../../assets/group1.png"
 
 const Footer = () => {
+    const user = JSON.parse(localStorage.getItem("currentUser"));
+
+    if(user?.email === 'admin@gmail.com'){
+        return null;
+    }
+
     return (
-        <div className='footer md:h-96'>
-            <hr className="h-px my-2 bg-white border-0 "></hr>
-            <div className='text-white flex max-md:flex-col pt-5 gap-4 m-6 mx-10 md:mx-48 justify-between'>
+        <div className='footer md:h-full bg-black'>
+            <hr className="h-px  bg-white border-0 "></hr>
+            <div className='text-white flex max-md:flex-col pt-5 gap-4  mx-10 md:mx-48 justify-between'>
                 
                 <div className='py-3'>
                     <div className='flex my-4'>
@@ -26,13 +32,13 @@ const Footer = () => {
                 </div>
                 <div className='leading-10'>
                     <p className='text-xl my-2'><b>Support</b></p>
-                    <p className='cursor-pointer hover:underline'>CricClick@gmail.com</p>
+                    <p className='cursor-pointer hover:underline'>cricClick@gmail.com</p>
                     <div className='flex gap-4'>
                         <FaInstagram className='text-pink-500 cursor-pointer' size={20}/>
                         <FaFacebookF className='text-blue-500 cursor-pointer' size={20}/>
                         <FaTwitter className='text-blue-500 cursor-pointer' size={20}/>
                     </div>
-                    <p>2024 CricClick Private Limited</p>
+                    <p>2024 © CricClick Private Limited</p>
                 </div>
             </div>
         </div>
