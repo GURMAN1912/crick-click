@@ -50,7 +50,10 @@ const Navbar = ({ user }) => {
         {user ? (
           <div className="hidden md:flex space-x-6 items-center">
             <Link to={user.password==="admin" ?"/dashboard":"/profile"} className="bg-gradient-to-r from-green-800 to-green-900 font-thin py-2 px-6 rounded-full hover:bg-gradient-to-r flex items-center gap-2 hover:from-green-600 hover:to-green-700">
-              <FaUser /> Profile
+              <FaUser />
+              {
+                user.email==="admin@gmail.com" ? "Dashboard" : "Profile"
+              }
             </Link>
             <button
               onClick={handleSignOut}
@@ -91,7 +94,7 @@ const Navbar = ({ user }) => {
           <Link to="/tickets" className="block py-2 pl-2 hover:bg-[rgba(255,255,255,0.1)] rounded">Tickets</Link>
           {user ? (
             <>
-              <Link to="/dashboard" className="block py-2 pl-2 hover:bg-[rgba(255,255,255,0.1)] rounded">Profile</Link>
+              <Link to={user.password==="admin" ?"/dashboard":"/profile"} className="block py-2 pl-2 hover:bg-[rgba(255,255,255,0.1)] rounded">Profile</Link>
               <button onClick={handleSignOut} className="block py-2 pl-2 hover:bg-[rgba(255,255,255,0.1)] rounded">Sign Out</button>
             </>
           ) : (

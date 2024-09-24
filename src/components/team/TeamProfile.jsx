@@ -6,7 +6,7 @@ export default function TeamProfile() {
   const teamData = {
     logo: 'https://th.bing.com/th/id/OIP.HwylqQM_APR3ZYRKdZz1WwHaHa?rs=1&pid=ImgDetMain',
     teamName: 'The Strikers',
-    captain: 'John Doe',
+    captain: 'Virat Kohli',
     preferredFormat: 'T20',
     players: [
         { name: 'Virat Kohli', role: 'Batsman' },
